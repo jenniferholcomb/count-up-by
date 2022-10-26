@@ -1,5 +1,5 @@
 
-# SCount Up By
+# Count Up By
 
 #### By Jennifer Holcomb Vera Weikel
 
