@@ -23,7 +23,6 @@ Output: 7, 14, 21, 28, 35, 42, 49
     multOfFive.push(index);
   }
 
-
 // one to count/another to determine multiple
 // Count to: 50
 // Count by: 7
@@ -33,3 +32,17 @@ Output: 7, 14, 21, 28, 35, 42, 49
     console.log(i);
     multOfSeven.push(i);
   }
+
+function handleFormSubmission(e){
+
+  e.preventDefault();
+  const inputNumber1 = document.getElementById("input-number-1").value;
+  const inputNumber2 = document.getElementById("input-number-2").value;
+}
+
+window.addEventListener("load", function(){
+
+  // const body = document.createElement("body");
+  // const form = document.createElement("form");
+  document.getQuerySelector("form#id-counter").addEventListener("submit", handleFormSubmission);
+});
