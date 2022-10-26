@@ -22,3 +22,14 @@ Output: 7, 14, 21, 28, 35, 42, 49
     console.log(index);
     multOfFive.push(index);
   }
+
+
+// one to count/another to determine multiple
+// Count to: 50
+// Count by: 7
+  let input7 = [50, 7];
+  let multOfSeven = [];
+  for( let i = 0; i <= input7[0]; i += input7[1]){
+    console.log(i);
+    multOfSeven.push(i);
+  }
