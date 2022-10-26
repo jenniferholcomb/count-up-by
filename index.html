@@ -12,14 +12,14 @@
     <form id="word-counter">
       <div class="form-group">
         <p>Input your first number. A number to count up to:</p>
-        <input id="input-value-1" name="num1" class="form-control"></input>
+        <input id="input-value-1"  type="number" name="num1" class="form-control" min="0" ></input>
         <p>Enter a second number. We will count up to first number, using second number as multiples value:</p>
-        <input type="number" id="input-value-2" name="num2" class="form-control">
+        <input type="number" id="input-value-2" name="num2" class="form-control" min="0">>
         <br>
         <button type="submit" class="btn btn-success">Submit Survey</button>
       </div>
     </form>
-    <p>Output showing multiples of second number, up to first number.</p><span id="total-count"></span></p>
+    <p>Output showing multiples of second number, up to first number.</p><span id="total-count" class="hidden"></span></p>
 
     </div>
   </div>

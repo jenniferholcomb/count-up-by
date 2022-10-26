@@ -15,34 +15,40 @@ Output: 7, 14, 21, 28, 35, 42, 49
 // one to count/another to determine multiple
 // Count to: 30
 // Count by: 5
-
-  let input = [30, 5];
-  let multOfFive = [];
-  for (let index = 0; index <= input[0]; index += 5) {
+function multiplier(input1, input2) {
+  let input = [input1, input2];
+  let multOf = [];
+  for (let index = 0; index <= input[0]; index += input[1]) {
     console.log(index);
-    multOfFive.push(index);
+    multOf.push(index);
   }
+  return multOf;
+}
+
 
 // one to count/another to determine multiple
 // Count to: 50
 // Count by: 7
-  let input7 = [50, 7];
-  let multOfSeven = [];
-  for( let i = 0; i <= input7[0]; i += input7[1]){
-    console.log(i);
-    multOfSeven.push(i);
-  }
+  // let input7 = [50, 7];
+  // let multOfSeven = [];
+  // for( let i = 0; i <= input7[0]; i += input7[1]){
+  //   console.log(i);
+  //   multOfSeven.push(i);
+  // }
 
 function handleFormSubmission(e){
 
   e.preventDefault();
-  const inputNumber1 = document.getElementById("input-number-1").value;
-  const inputNumber2 = document.getElementById("input-number-2").value;
+  const inputNumber1 = parseInt(document.getElementById("input-value-1").value);
+  console.log("inputNumber1: ", inputNumber1);
+  const inputNumber2 = parseInt(document.getElementById("input-value-2").value);
+  console.log("inputNumber2: ", inputNumber2);
+  const numIncrement = multiplier(inputNumber1, inputNumber2);
+
+  console.log("numIncrement: ", numIncrement);
 }
 
 window.addEventListener("load", function(){
 
-  // const body = document.createElement("body");
-  // const form = document.createElement("form");
-  document.getQuerySelector("form#id-counter").addEventListener("submit", handleFormSubmission);
+  document.querySelector("form#word-counter").addEventListener("submit", handleFormSubmission);
 });
